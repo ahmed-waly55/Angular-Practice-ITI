@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <h1>Total Price {{totalOrder}}</h1>
+    <h2 class="mb-4"> All Products </h2>
+    <div class="row g-4">
+        <div class="col-md-4" *ngFor="let prod of products">
+            <div class="card">
+                <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{prod.name}}</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 mb-0">${{prod.price}}</span>
+                        <div>
+                    
+                            <small class="text-muted">(4.5)</small><br>
+                            <small class="card-text">Quantity : {{prod.quantity}}</small>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex m-4">
+                    <!-- refrence , template variable   -->
+                    <input type="number" #countInp>
+                    <button (click)="buy(countInp.value , prod.price , prod.quantity)" class="btn btn-primary">BUY</button>
+                </div>
+                
+
+                <div class="card-footer d-flex justify-content-between bg-light">
+                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
