@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  // template:'<h1>Hello inclide {{title}}</h1>',
-  standalone: false,
   styleUrl: './app.component.css'
-  // styles:[`h1{color:green;}`]
 })
 export class AppComponent {
   title = 'angular';
 }
- 
