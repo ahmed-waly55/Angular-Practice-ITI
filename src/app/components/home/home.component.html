@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -66,4 +66,16 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+
+
+  <h1>{{myStore.name}}</h1>
+  <!-- <img src="{{myStore.imgUrl}}">  -->
+  <img [src]="myStore.imgUrl" alt="logo">
+   
+
+  <!-- old version  -->
+  <h3 *ngFor="let branch of myStore.branches">{{branch}}</h3>   
+
