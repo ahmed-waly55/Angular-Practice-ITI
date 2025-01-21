@@ -9,8 +9,12 @@
 <div class="container mt-5">
     <h2 class="mb-4"> All Products </h2>
     <div class="row g-4">
-        <!-- class binding exmaple [class.d-none]="prod.catId!=selectedCatId" -->
-        <div class="col-md-4" *ngFor="let prod of products" [class.d-none]="prod.catId!=selectedCatId">
+    
+                <!-- class binding exmaple [class.d-none]="prod.catId!=selectedCatId" -->
+                <!-- ng-container is fixed addedd to directive not add in Dom -->
+        <ng-container *ngFor="let prod of products" [class.d-none]="prod.catId!=selectedCatId" >
+
+        <div class="col-md-4" *ngIf="prod.quantity!=0" >
             <div class="card">
                 <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
                 <!-- style binding for example [style.background-color]="(prod.quantity == 0)? 'yellow' : 'white' " -->
@@ -41,6 +45,8 @@
                 </div>
             </div>
         </div>
+
+        </ng-container>
     
     </div>
 </div>
