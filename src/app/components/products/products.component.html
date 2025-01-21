@@ -1,8 +1,16 @@
+
+<h1>Total Price {{totalOrder}}</h1>
+<h3>selected category is : {{selectedCatId}}</h3>
+<select class="form-select" aria-label="Disabled select example" [(ngModel)]="selectedCatId">
+    <option value="0" selected>All Products</option>
+    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+  </select>
+
 <div class="container mt-5">
-    <h1>Total Price {{totalOrder}}</h1>
     <h2 class="mb-4"> All Products </h2>
     <div class="row g-4">
-        <div class="col-md-4" *ngFor="let prod of products">
+        <!-- class binding exmaple [class.d-none]="prod.catId!=selectedCatId" -->
+        <div class="col-md-4" *ngFor="let prod of products" [class.d-none]="prod.catId!=selectedCatId">
             <div class="card">
                 <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
                 <div class="card-body">

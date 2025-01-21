@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
 import { Iproduct } from '../../models/iproduct';
 import { CommonModule } from '@angular/common';
+import { Icategory } from '../../models/icategory';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
 
   products:Iproduct[];
+  categories:Icategory[];
+  selectedCatId:number = 0;
   totalOrder:number = 0;
+
+
+
 
   constructor(){
     this.products = [
@@ -23,6 +30,11 @@ export class ProductsComponent {
       {id: 6, name: 'Product 6', price: 600, quantity: 4, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
       {id: 7, name: 'Product 7', price: 700, quantity: 6, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 8, name: 'Product 8', price: 800, quantity: 8, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
+    ]
+
+    this.categories = [
+      {id: 1, name: 'Category 1'},
+      {id: 2, name: 'Category 2'},
     ]
   }
 
