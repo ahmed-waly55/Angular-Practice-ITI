@@ -22,7 +22,7 @@ export class ProductsComponent {
 
   constructor(){
     this.products = [
-      {id: 1, name: 'Product 1', price: 100, quantity: 5, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
+      {id: 1, name: 'Product 1', price: 100, quantity: 0, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 2, name: 'Product 2', price: 200, quantity: 3, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
       {id: 3, name: 'Product 3', price: 300, quantity: 7, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 4, name: 'Product 4', price: 400, quantity: 2, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},

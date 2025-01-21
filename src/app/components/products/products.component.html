@@ -13,7 +13,11 @@
         <div class="col-md-4" *ngFor="let prod of products" [class.d-none]="prod.catId!=selectedCatId">
             <div class="card">
                 <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
-                <div class="card-body">
+                <!-- style binding for example [style.background-color]="(prod.quantity == 0)? 'yellow' : 'white' " -->
+
+                <div class="card-body"
+                [style.background-color]="(prod.quantity == 0)? 'yellow' : 'white' "
+                >
                     <h5 class="card-title">{{prod.name}}</h5>
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="h5 mb-0">${{prod.price}}</span>
