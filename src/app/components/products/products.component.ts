@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { Icategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
 import { HighligtCardDirective } from '../../directives/highligt-card.directive';
+import { SquarePipe } from '../../pipes/square.pipe';
 
 // import dirctive name HighligtCardDirective 
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule,FormsModule,HighligtCardDirective],
+  imports: [CommonModule,FormsModule,HighligtCardDirective,SquarePipe],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -19,13 +20,13 @@ export class ProductsComponent {
   categories:Icategory[];
   selectedCatId:number = 0;
   totalOrder:number = 0;
-
-
+  myDate:Date = new Date();
+  num:number = 4;
 
 
   constructor(){
     this.products = [
-      {id: 1, name: 'Product 1', price: 100, quantity: 0, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
+      {id: 1, name: 'Product 1', price: 1000000, quantity: 0, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 2, name: 'Product 2', price: 200, quantity: 3, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
       {id: 3, name: 'Product 3', price: 300, quantity: 7, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 4, name: 'Product 4', price: 400, quantity: 2, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},

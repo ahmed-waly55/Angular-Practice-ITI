@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{prod.name}}</h5>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="h5 mb-0">${{prod.price}}</span>
+                            <span class="h5 mb-0"> price {{prod.price | currency:'EUR' }}</span>
                             <div>
                         
                                 <small class="text-muted">(4.5)</small><br>
@@ -45,6 +45,9 @@
         @empty {
           <h1 class="">no products found </h1>
         }
+
+        <h1>Date Now : {{myDate | date : 'shortDate'}}</h1>
+        <h1>Number : {{num | square}}</h1>
     
     </div>
 </div>
