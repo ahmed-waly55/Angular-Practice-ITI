@@ -29,3 +29,11 @@
 
 
 ![image](https://github.com/user-attachments/assets/30d2e15e-2d33-456a-accb-8b23f63a581e)
+
+
+<h2>Component Lifecycle</h2>
+
+![image](https://github.com/user-attachments/assets/24525756-4027-49c1-a10f-1678490988a7)
+
+![image](https://github.com/user-attachments/assets/ff1489d6-7522-4548-9781-811548b90af3)
+
