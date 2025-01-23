@@ -1,7 +1,7 @@
 
 <h1>Total Price {{totalOrder}}</h1>
 <h3>selected category is : {{selectedCatId}}</h3>
-<select class="form-select" aria-label="Disabled select example" [(ngModel)]="selectedCatId">
+<select class="form-select" aria-label="Disabled select example" name="" id="" [(ngModel)]="selectedCatId">
     <option value="0" selected>All Products</option>
     <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
   </select>
@@ -10,21 +10,13 @@
     <h2 class="mb-4"> All Products </h2>
     <div class="row g-4">
     
-                <!-- class binding exmaple [class.d-none]="prod.catId!=selectedCatId" -->
-                <!-- ng-container is fixed addedd to directive not add in Dom -->
-        <!-- <ng-container *ngFor="let prod of products" [class.d-none]="prod.catId!=selectedCatId" > -->
-
-
         @for(prod of products; track prod.id){
 
-            <div class="col-md-4" *ngIf="prod.quantity!=0" >
-                <div class="card">
+            <div class="col-md-4" >
+                <div class="card" appHighligtCard="red" extrnalColor="green" >
                     <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
-                    <!-- style binding for example [style.background-color]="(prod.quantity == 0)? 'yellow' : 'white' " -->
     
-                    <div class="card-body"
-                    [style.background-color]="(prod.quantity == 0)? 'yellow' : 'white' "
-                    >
+                    <div class="card-body">
                         <h5 class="card-title">{{prod.name}}</h5>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="h5 mb-0">${{prod.price}}</span>
@@ -53,7 +45,6 @@
         @empty {
           <h1 class="">no products found </h1>
         }
-        <!-- </ng-container> -->
     
     </div>
 </div>
