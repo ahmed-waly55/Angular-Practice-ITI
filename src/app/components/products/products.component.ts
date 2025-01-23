@@ -3,10 +3,13 @@ import { Iproduct } from '../../models/iproduct';
 import { CommonModule } from '@angular/common';
 import { Icategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
+import { HighligtCardDirective } from '../../directives/highligt-card.directive';
+
+// import dirctive name HighligtCardDirective 
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,HighligtCardDirective],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
