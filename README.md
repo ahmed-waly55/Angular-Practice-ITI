@@ -1,59 +1,21 @@
-# Angular
+<h1>Day 2 </h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+<h3>Binding</h3>
 
-## Development server
+![image](https://github.com/user-attachments/assets/b0955c26-7a5c-498e-a56b-f044c5f2ae2c)
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+<h2>Directives</h2>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![image](https://github.com/user-attachments/assets/8f817784-25ca-4791-8dad-dde225b0e875)
+![image](https://github.com/user-attachments/assets/d5b81f18-f69f-499b-93f5-19448718aa10)
+![image](https://github.com/user-attachments/assets/8b35712f-4d82-4c72-b1d9-0a73c2a8a72a)
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+![image](https://github.com/user-attachments/assets/fb55de26-9793-4499-b85f-9843233c5a0c)
 
-```bash
-ng generate component component-name
-```
+![image](https://github.com/user-attachments/assets/c375ab57-dfb3-48e5-b7db-62fd7755bf39)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<h2>serach in keyword</h2> <br>
+1-ng-container <br>
+2-ng-template
