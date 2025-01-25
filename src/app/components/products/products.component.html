@@ -1,5 +1,34 @@
 
 <h1>Total Price {{totalOrder}}</h1>
+
+    <!-- <h1>Product {{name}}</h1> -->
+    <table class="table">
+        <thead>
+            
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        @for(name of productName; track name; let i = $index;){
+        
+        <tbody>
+          <tr>
+            <th scope="row">{{i + 1 }}</th>
+            <td>{{name}}</td>
+            <td>{{productPrice[i] | currency}}</td>
+            <td>{{countInp[i]}}</td>
+          </tr>
+     
+        
+        </tbody>
+        }
+      </table>
+
+
+<!-- <h1>Name {{productName}}</h1> -->
 <!-- <h3>selected category is : {{selectedCatId}}</h3> -->
 
 
@@ -17,13 +46,13 @@
                     <span class="h5 mb-0"> price {{prod.price | currency:'EUR' }}</span>
                     <div>
                       <small class="text-muted">(4.5)</small><br>
-                      <small class="card-text">Quantity : {{prod.quantity}}</small>
+                      <small #quantityP class="card-text">Quantity : {{prod.quantity}}</small>
                     </div>
                   </div>
                 </div>
                 <div class="d-flex m-4">
                   <input type="number" #countInp>
-                  <button (click)="buy(countInp.value, prod.price, prod.quantity)" class="btn btn-primary">BUY</button>
+                  <button (click)="buy(countInp.value, prod.price, prod.quantity)" (click)="addOrder(prod.name , countInp.value , prod.price)" class="btn btn-primary">BUY</button>
                 </div>
                 <div class="card-footer d-flex justify-content-between bg-light">
                   <button class="btn btn-primary btn-sm">Add to Cart</button>
