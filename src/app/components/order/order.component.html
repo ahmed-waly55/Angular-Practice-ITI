@@ -4,5 +4,7 @@
   </select>
 
 <div class="bg-warning ">
-    <app-products></app-products> 
+    <app-products [recievedCatId]="selectedCatId" (onTotalPriceChanged)="calcTotalPrice($event)"></app-products> 
 </div>
+
+<h1>Total Price {{recievedTotalPrice | currency}}</h1>

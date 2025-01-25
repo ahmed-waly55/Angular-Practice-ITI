@@ -12,6 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class OrderComponent {
 
+  // subscriber 
+recievedTotalPrice:number = 0;
+
 categories:Icategory[];
 selectedCatId:number = 0;
 constructor(){
@@ -21,4 +24,8 @@ constructor(){
   ]
 }
   
+// subscriber 
+calcTotalPrice(total:number){
+  this.recievedTotalPrice = total;
+}
 }
