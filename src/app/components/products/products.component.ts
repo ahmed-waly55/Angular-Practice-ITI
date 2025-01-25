@@ -21,8 +21,14 @@ export class ProductsComponent implements OnChanges{
   // selectedCatId:number = 0;
   filteredProducts:Iproduct[];
   totalOrder:number = 0;
+  productName:string[] = [];
+  productPrice:number[] = [];
   myDate:Date = new Date();
   num:number = 4;
+  // nameId:number[] = [];
+  // lastNumber:number = 0;
+  // lastNumber = this.nameId[nameId - 1];
+  countInp:Number[] = [];
 
 // 1 - publisher -- > define event 
   @Output() onTotalPriceChanged:EventEmitter<number>
@@ -65,6 +71,25 @@ export class ProductsComponent implements OnChanges{
     this.onTotalPriceChanged.emit(this.totalOrder)
 
   }
+  }
+
+  addOrder(name:string , quantity:string , price:number){
+   if(quantity === ""){
+     alert('Please enter a quantity');
+     
+   }
+   else{
+    this.productName.push(name);
+    this.productPrice.push(price * +quantity);
+    this.countInp.push(+quantity);
+    console.log(this.productName);
+   }
+    // this.filterProducts();
+    // this.nameId +=1
+    // this.nameId.push(id)
+    // lastNumber = this.nameId.length - 1;
+    // console.log(this.lastNumber)
+
   }
 
 
