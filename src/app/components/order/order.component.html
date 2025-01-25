@@ -1,0 +1,8 @@
+<select class="form-select m-3" aria-label="Disabled select example" [(ngModel)]="selectedCatId">
+    <option value="0" selected value="0">All Products</option>
+    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+  </select>
+
+<div class="bg-warning ">
+    <app-products></app-products> 
+</div>

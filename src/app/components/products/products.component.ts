@@ -17,8 +17,9 @@ import { SquarePipe } from '../../pipes/square.pipe';
 export class ProductsComponent {
 
   products:Iproduct[];
-  categories:Icategory[];
-  selectedCatId:number = 0;
+  // categories:Icategory[];
+  // selectedCatId:number = 0;
+  filteredProducts:Iproduct[];
   totalOrder:number = 0;
   myDate:Date = new Date();
   num:number = 4;
@@ -36,10 +37,8 @@ export class ProductsComponent {
       {id: 8, name: 'Product 8', price: 800, quantity: 8, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
     ]
 
-    this.categories = [
-      {id: 1, name: 'Category 1'},
-      {id: 2, name: 'Category 2'},
-    ]
+   
+    this.filteredProducts = this.products
   }
 
 
@@ -53,5 +52,15 @@ export class ProductsComponent {
   }
   }
 
+
+  filterProducts() {
+    // if (this.selectedCatId == 0) {
+    //   this.filteredProducts = this.products;
+    // } else {
+    //   this.filteredProducts = this.products.filter((prd) => {
+    //     return prd.catId == this.selectedCatId; 
+    //   });
+    // }
+  }
 
 }

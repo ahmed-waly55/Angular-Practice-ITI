@@ -1,51 +1,40 @@
 
 <h1>Total Price {{totalOrder}}</h1>
-<h3>selected category is : {{selectedCatId}}</h3>
-<select class="form-select" aria-label="Disabled select example" name="" id="" [(ngModel)]="selectedCatId">
-    <option value="0" selected>All Products</option>
-    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
-  </select>
+<!-- <h3>selected category is : {{selectedCatId}}</h3> -->
+
 
 <div class="container mt-5">
     <h2 class="mb-4"> All Products </h2>
     <div class="row g-4">
     
-        @for(prod of products; track prod.id){
-
-            <div class="col-md-4" >
-                <div class="card" appHighligtCard="red" extrnalColor="green" >
-                    <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
-    
-                    <div class="card-body">
-                        <h5 class="card-title">{{prod.name}}</h5>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="h5 mb-0"> price {{prod.price | currency:'EUR' }}</span>
-                            <div>
-                        
-                                <small class="text-muted">(4.5)</small><br>
-                                <small class="card-text">Quantity : {{prod.quantity}}</small>
-    
-                            </div>
-                        </div>
+        @for(prod of filteredProducts; track prod.id; let i = $index;){
+            <div class="col-md-4">
+              <div class="card" appHighligtCard="red" extrnalColor="green">
+                <img src="{{prod.imgUrl}}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">{{i+1}} {{prod.name}}</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="h5 mb-0"> price {{prod.price | currency:'EUR' }}</span>
+                    <div>
+                      <small class="text-muted">(4.5)</small><br>
+                      <small class="card-text">Quantity : {{prod.quantity}}</small>
                     </div>
-                    <div class="d-flex m-4">
-                        <!-- refrence , template variable   -->
-                        <input type="number" #countInp>
-                        <button (click)="buy(countInp.value , prod.price , prod.quantity)" class="btn btn-primary">BUY</button>
-                    </div>
-                    
-    
-                    <div class="card-footer d-flex justify-content-between bg-light">
-                        <button class="btn btn-primary btn-sm">Add to Cart</button>
-                    </div>
+                  </div>
                 </div>
+                <div class="d-flex m-4">
+                  <input type="number" #countInp>
+                  <button (click)="buy(countInp.value, prod.price, prod.quantity)" class="btn btn-primary">BUY</button>
+                </div>
+                <div class="card-footer d-flex justify-content-between bg-light">
+                  <button class="btn btn-primary btn-sm">Add to Cart</button>
+                </div>
+              </div>
             </div>
-    
-        }
-        @empty {
-          <h1 class="">no products found </h1>
-        }
-
+          }
+          @empty {
+            <h1 class="">no products found</h1>
+          }
+          
         <h1>Date Now : {{myDate | date : 'shortDate'}}</h1>
         <h1>Number : {{num | square}}</h1>
     
