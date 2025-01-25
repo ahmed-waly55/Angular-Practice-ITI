@@ -1,29 +1,3 @@
-### Progress Bar
-| 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **37.5%**
-
-<h1>Angular </h1>
-<h1>Day 2 </h1>
-
-<h3>Binding</h3>
-
-![image](https://github.com/user-attachments/assets/b0955c26-7a5c-498e-a56b-f044c5f2ae2c)
-
-
-<h2>Directives</h2>
-
-![image](https://github.com/user-attachments/assets/8f817784-25ca-4791-8dad-dde225b0e875)
-![image](https://github.com/user-attachments/assets/d5b81f18-f69f-499b-93f5-19448718aa10)
-![image](https://github.com/user-attachments/assets/8b35712f-4d82-4c72-b1d9-0a73c2a8a72a)
-
-
-![image](https://github.com/user-attachments/assets/fb55de26-9793-4499-b85f-9843233c5a0c)
-
-![image](https://github.com/user-attachments/assets/c375ab57-dfb3-48e5-b7db-62fd7755bf39)
-
-<h2>serach in keyword</h2> <br>
-1-ng-container <br>
-2-ng-template
-
 <h1>Day 3 </h1>
 <h2>Pipe</h2>
 
@@ -44,4 +18,4 @@
 ![image](https://github.com/user-attachments/assets/479f5306-2655-4995-b69c-841e3f6ee473)
 
 ![image](https://github.com/user-attachments/assets/e653b844-7d2d-41f2-add0-f1fb25ac10b2)
-
+![image](https://github.com/user-attachments/assets/d9d65f2c-73c1-4150-a47e-ba74ae27b74e)
