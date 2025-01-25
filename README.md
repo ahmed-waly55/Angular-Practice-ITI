@@ -2,9 +2,12 @@
 | 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **37.5%**
 
 <h1>Angular </h1>
+<h1>Day 2 </h1>
+
 <h3>Binding</h3>
 
 ![image](https://github.com/user-attachments/assets/b0955c26-7a5c-498e-a56b-f044c5f2ae2c)
+
 
 <h2>Directives</h2>
 
@@ -21,6 +24,7 @@
 1-ng-container <br>
 2-ng-template
 
+<h1>Day 3 </h1>
 <h2>Pipe</h2>
 
 ![image](https://github.com/user-attachments/assets/668f3026-61b2-4b63-bac4-fcdce24eadda)
