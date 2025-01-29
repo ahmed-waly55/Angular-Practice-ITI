@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { ProductsComponent } from '../products/products.component';
 import { Icategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,9 @@ recievedTotalPrice:number = 0;
 
 categories:Icategory[];
 selectedCatId:number = 0;
+
+myInp!:ElementRef // non null assertion operator 
+
 constructor(){
   this.categories = [
     {id: 1, name: 'Category 1'},
