@@ -5,6 +5,7 @@ import { Icategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
 import { HighligtCardDirective } from '../../directives/highligt-card.directive';
 import { SquarePipe } from '../../pipes/square.pipe';
+import { StaticProductsService } from '../../services/static-products.service';
 
 // import dirctive name HighligtCardDirective 
 
@@ -36,27 +37,20 @@ export class ProductsComponent implements OnChanges{
 
   @Input() recievedCatId:number = 0
 
-  constructor(){
+  constructor(private _StaticProductsService:StaticProductsService){
 
     // 1.1 - intaial value 
     this.onTotalPriceChanged = new EventEmitter<number>();
 
-    this.products = [
-      {id: 1, name: 'Product 1', price: 1000000, quantity: 0, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
-      {id: 2, name: 'Product 2', price: 2000000, quantity: 3, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
-      {id: 3, name: 'Product 3', price: 30000, quantity: 7, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
-      {id: 4, name: 'Product 4', price: 400, quantity: 2, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
-      {id: 5, name: 'Product 5', price: 500, quantity: 10, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
-      {id: 6, name: 'Product 6', price: 600, quantity: 4, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
-      {id: 7, name: 'Product 7', price: 700000000000, quantity: 6, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
-      {id: 8, name: 'Product 8', price: 800, quantity: 8, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
-    ]
-
+    this.products = this._StaticProductsService.getAllProducts();
    
     this.filteredProducts = this.products
   }
   ngOnChanges() {
-    this.filterProducts();
+    // this.filterProducts();
+
+    this.filteredProducts = this._StaticProductsService.getProductsByCatId(this.recievedCatId)
+
   }
 
 
@@ -94,22 +88,22 @@ export class ProductsComponent implements OnChanges{
 
 
 
-  filterProducts() {
-    // if (this.selectedCatId == 0) {
-    //   this.filteredProducts = this.products;
-    // } else {
-    //   this.filteredProducts = this.products.filter((prd) => {
-    //     return prd.catId == this.selectedCatId; 
-    //   });
-    // }
+  // filterProducts() {
+  //   // if (this.selectedCatId == 0) {
+  //   //   this.filteredProducts = this.products;
+  //   // } else {
+  //   //   this.filteredProducts = this.products.filter((prd) => {
+  //   //     return prd.catId == this.selectedCatId; 
+  //   //   });
+  //   // }
 
-       if (this.recievedCatId == 0) {
-      this.filteredProducts = this.products;
-    } else {
-      this.filteredProducts = this.products.filter((prd) => {
-        return prd.catId == this.recievedCatId; 
-      });
-    }
-  }
+  //      if (this.recievedCatId == 0) {
+  //     this.filteredProducts = this.products;
+  //   } else {
+  //     this.filteredProducts = this.products.filter((prd) => {
+  //       return prd.catId == this.recievedCatId; 
+  //     });
+  //   }
+  // }
 
 }
