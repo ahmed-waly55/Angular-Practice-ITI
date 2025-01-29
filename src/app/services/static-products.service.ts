@@ -10,7 +10,7 @@ export class StaticProductsService {
   constructor() { 
     this.products = [
       {id: 1, name: 'Product 1', price: 1000000, quantity: 0, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
-      {id: 2, name: 'Product 2', price: 2000000, quantity: 3, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
+      {id: 2, name: 'Product 2', price: 2000000, quantity: 13, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
       {id: 3, name: 'Product 3', price: 30000, quantity: 7, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
       {id: 4, name: 'Product 4', price: 400, quantity: 2, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 2},
       {id: 5, name: 'Product 5', price: 500, quantity: 10, imgUrl: 'https://fakeimg.pl/350x200/?text=Hello', catId: 1},
@@ -29,4 +29,12 @@ export class StaticProductsService {
      return foundedPrd?foundedPrd:null;
   }
 
+  getProductsByCatId(catId:number){
+    if(catId == 0){
+      return this.products; 
+    }
+    else{
+      return this.products.filter((prd)=> prd.catId == catId)
+    }
+  }
 }
