@@ -9,6 +9,7 @@ import { VisionComponent } from './components/vision/vision.component';
 import { ValuesComponent } from './components/values/values.component';
 
 export const routes: Routes = [
+    {path: '' , redirectTo: 'home' , pathMatch:'full'},
     {path: 'home' , component: HomeComponent},
     {path: 'products', component : ProductsComponent},
 
@@ -16,12 +17,12 @@ export const routes: Routes = [
     children: [
         // {path:'', component: VisionComponent}, // defualt visting in the not selected component
         {path: '' ,pathMatch:'full' , redirectTo: '/about/vision'}, // anthor visting in the not selected component
-        {path: 'vision', component: VisionComponent},
+        {path: 'vision', component: VisionComponent}, 
         {path: 'values', component: ValuesComponent}
             ],
     },
 
-    {path: 'details', component: DetailsComponent},
+    {path: 'details/:id', component: DetailsComponent},
     {path: 'order', component: OrderComponent},
 
     

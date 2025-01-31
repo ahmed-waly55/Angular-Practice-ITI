@@ -1,1 +1,8 @@
-<p>details works!</p>
+<h1>Product Details</h1>
+
+<h2>name is {{product?.name}}</h2>
+
+<img [src]="product?.imgUrl">
+
+<p>price is {{product?.price | currency }}</p>
+<p>quantity is {{product?.quantity}}</p>

@@ -6,12 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { HighligtCardDirective } from '../../directives/highligt-card.directive';
 import { SquarePipe } from '../../pipes/square.pipe';
 import { StaticProductsService } from '../../services/static-products.service';
+import { Router, RouterLink } from '@angular/router';
 
 // import dirctive name HighligtCardDirective 
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule,FormsModule,HighligtCardDirective,SquarePipe],
+  imports: [CommonModule,FormsModule,HighligtCardDirective,SquarePipe, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -37,7 +38,7 @@ export class ProductsComponent implements OnChanges{
 
   @Input() recievedCatId:number = 0
 
-  constructor(private _StaticProductsService:StaticProductsService){
+  constructor(private _StaticProductsService:StaticProductsService, private _Router:Router){
 
     // 1.1 - intaial value 
     this.onTotalPriceChanged = new EventEmitter<number>();
@@ -105,5 +106,12 @@ export class ProductsComponent implements OnChanges{
   //     });
   //   }
   // }
+
+
+  navigateToDetails(id:number){
+    // this._Router.navigateByUrl(`/details/${id}`)
+    this._Router.navigate(['/details',id])
+  }
+
 
 }
