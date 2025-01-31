@@ -53,6 +53,10 @@
                 <div class="d-flex m-4">
                   <input type="number" #countInp>
                   <button (click)="buy(countInp.value, prod.price, prod.quantity)" (click)="addOrder(prod.name , countInp.value , prod.price)" class="btn btn-primary">BUY</button>
+              
+                  <!-- <button [routerLink]="['/details',prod.id]" class="btn btn-success mx-2 p-2">Details</button> -->
+                  <button (click)="navigateToDetails(prod.id)" class="btn btn-success mx-2 p-2">Details</button>
+               
                 </div>
                 <div class="card-footer d-flex justify-content-between bg-light">
                   <button class="btn btn-primary btn-sm">Add to Cart</button>
