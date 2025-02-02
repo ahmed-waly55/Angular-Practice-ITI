@@ -1,18 +1,17 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { Iproduct } from '../../models/iproduct';
 import { CommonModule } from '@angular/common';
-import { Icategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
 import { HighligtCardDirective } from '../../directives/highligt-card.directive';
 import { SquarePipe } from '../../pipes/square.pipe';
 import { StaticProductsService } from '../../services/static-products.service';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 // import dirctive name HighligtCardDirective 
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule,FormsModule,HighligtCardDirective,SquarePipe, RouterLink],
+  imports: [CommonModule,FormsModule,HighligtCardDirective,SquarePipe],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
