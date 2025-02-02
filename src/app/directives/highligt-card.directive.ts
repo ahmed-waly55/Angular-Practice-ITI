@@ -14,7 +14,7 @@ export class HighligtCardDirective implements OnChanges{
   // add ele type of ElementRef in the constructor
 
   constructor(private ele:ElementRef) { 
-     console.log(ele)
+    //  console.log(ele)
   }
   ngOnChanges() {
     this.ele.nativeElement.style.backgroundColor = this.defaultColor; 

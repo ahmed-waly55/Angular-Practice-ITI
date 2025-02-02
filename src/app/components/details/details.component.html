@@ -6,3 +6,11 @@
 
 <p>price is :{{product?.price | currency }}</p>
 <p>quantity is :{{product?.quantity}}</p>
+
+
+<button class="btn btn-primary" (click)="goBack()">Back</button>
+
+<div class="m-3 p-2">
+    <button (click)="prev()" class="btn btn-success p-2 m-1" [disabled]="currentId == idsArr[0]">Prev</button>
+    <button (click)="next()" class="btn btn-danger p-2 m-1" [disabled]="currentId == idsArr[idsArr.length - 1]">Next</button>
+</div>
