@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StaticProductsService } from '../../services/static-products.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { UserAuthService } from '../../services/user-auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +10,23 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   providers:[StaticProductsService],
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
 
-  constructor(private _StaticProductsService:StaticProductsService){
+  isUserLogined!:boolean;
+  constructor(private _userAuth:UserAuthService){
     
   }
+  ngOnInit(): void {
+    // this.isUserLogined = this._userAuth.getUserLogged();
+
+    this._userAuth.getAuthSubject().subscribe({
+      next:(status)=>{
+        this.isUserLogined = status;
+      },
+
+    })
+  }
+
 
 
 

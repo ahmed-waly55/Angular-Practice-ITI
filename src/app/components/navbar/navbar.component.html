@@ -21,6 +21,16 @@
           <li class="nav-item">
             <a routerLink="/about"  routerLinkActive="bg-danger text-white" class="nav-link" >About Us</a>
           </li>
+          <li class="nav-item">
+            @if(isUserLogined){
+              <a routerLink="/login"  routerLinkActive="bg-danger text-white" class="nav-link" >Login</a>
+            }
+            @else {
+              <a routerLink="/login"  routerLinkActive="bg-danger text-white" class="nav-link" >Logout</a>
+
+            }
+          </li>
+       
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
