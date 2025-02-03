@@ -1,0 +1,4 @@
+<p>login works!</p>
+
+<button class="btn btn-danger" (click)="login()" [disabled]="isUserLogged">login</button>
+<button class="btn btn-primary" (click)="logout()" [disabled]="!isUserLogged">logout</button>

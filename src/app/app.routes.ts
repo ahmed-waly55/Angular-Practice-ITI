@@ -7,10 +7,12 @@ import { OrderComponent } from './components/order/order.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { ValuesComponent } from './components/values/values.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
     {path: '' , redirectTo: 'home' , pathMatch:'full'},
     {path: 'home' , component: HomeComponent},
+    {path:'login',component: LoginComponent},
     {path: 'products', component : ProductsComponent},
 
     {path: 'about', component: AboutUsComponent,
