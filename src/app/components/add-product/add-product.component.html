@@ -1,24 +1,40 @@
-<form>
+<h1>{{prodName.errors| json}}</h1>
+<form (submit)="addNewProduct()" #addProductForm="ngForm">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Name:</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="text" name="name" [(ngModel)]="newProduct.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      required
+      pattern="^[a-zA-Z]{3,15}$"
+      #prodName="ngModel"
+      >
+      @if(prodName.invalid && prodName.touched){
+        <div class="text-danger" >
+            @if(prodName.errors?.['required']){
+                <p>Name is required</p>
+            }
+            @if(prodName.errors?.['pattern']){
+                <p>Name must be at last 3 char </p>
+            }
+          </div>
+      }
+      
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">price:</label>
-      <input type="number" class="form-control" id="exampleInputPassword1">
+      <input type="number" name="price" [(ngModel)]="newProduct.price" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Quantity:</label>
-      <input type="number" class="form-control" id="exampleInputPassword1">
+      <input type="number" name="quantity" [(ngModel)]="newProduct.quantity" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Image:</label>
-      <input type="file" class="form-control" id="exampleInputPassword1">
+      <input type="file" name="imgUrl" [(ngModel)]="newProduct.imgUrl" class="form-control" id="exampleInputPassword1">
     </div>
     
     <div class="m-3">
     <label for="" class="form-label">Categories</label>
-    <select class="form-select " aria-label="Default select example">
+    <select name="catId" [(ngModel)]="newProduct.catId" class="form-select " aria-label="Default select example">
         @for(cat of categories;track cat.id){
             <option [value]="cat.id">{{cat.name}}</option>
         }
@@ -26,5 +42,5 @@
     
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="addProductForm.invalid">Submit</button>
   </form>
