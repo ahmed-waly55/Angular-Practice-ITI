@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Iproduct } from '../../models/iproduct';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,6 +6,7 @@ import { HighligtCardDirective } from '../../directives/highligt-card.directive'
 import { SquarePipe } from '../../pipes/square.pipe';
 import { StaticProductsService } from '../../services/static-products.service';
 import { Router } from '@angular/router';
+import { ApiProductsService } from '../../services/api-products.service';
 
 // import dirctive name HighligtCardDirective 
 
@@ -15,9 +16,9 @@ import { Router } from '@angular/router';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent implements OnChanges{
+export class ProductsComponent implements OnChanges , OnInit{
 
-  products:Iproduct[];
+  products:Iproduct[]=[] as Iproduct[];
   // categories:Icategory[];
   // selectedCatId:number = 0;
   filteredProducts:Iproduct[];
@@ -37,19 +38,38 @@ export class ProductsComponent implements OnChanges{
 
   @Input() recievedCatId:number = 0
 
-  constructor(private _StaticProductsService:StaticProductsService, private _Router:Router){
+  constructor(
+    private _ApiProdeuct:ApiProductsService,
+     private _Router:Router
+    ){
 
     // 1.1 - intaial value 
     this.onTotalPriceChanged = new EventEmitter<number>();
 
-    this.products = this._StaticProductsService.getAllProducts();
+    // this.products = this._StaticProductsService.getAllProducts();
    
     this.filteredProducts = this.products
   }
-  ngOnChanges() {
-    // this.filterProducts();
+  ngOnInit(): void {
+    this._ApiProdeuct.getAllProducts().subscribe({
+      next:(ress)=>{
+        this.products = ress;
+        this.filteredProducts = this.products;
+      },
+      error:(error)=>{console.log(error);
+      },
 
-    this.filteredProducts = this._StaticProductsService.getProductsByCatId(this.recievedCatId)
+    })
+  }
+  ngOnChanges() {
+
+     this._ApiProdeuct.getProductByCatId(this.recievedCatId).subscribe({
+      next: (res)=>{
+        this.filteredProducts = res;
+      },
+      error:(error)=>{console.log(error);
+      },
+     })
 
   }
 
