@@ -22,10 +22,13 @@
             <a routerLink="/about"  routerLinkActive="bg-danger text-white" class="nav-link" >About Us</a>
           </li>
           <li class="nav-item">
-            @if(isUserLogined){
+            <a routerLink="/add"  routerLinkActive="bg-danger text-white" class="nav-link" >Add Product</a>
+          </li>
+          <li class="nav-item">
+            @if(!isUserLogined){
               <a routerLink="/login"  routerLinkActive="bg-danger text-white" class="nav-link" >Login</a>
             }
-            @else {
+            @if(isUserLogined) {
               <a routerLink="/login"  routerLinkActive="bg-danger text-white" class="nav-link" >Logout</a>
 
             }
