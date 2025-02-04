@@ -1,5 +1,5 @@
 ### Progress Bar
-| 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | ⬜ | **62.50%**
+| 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | **68.75%**
 
 <h1>Angular </h1>
 <h1>Day 2 </h1>
@@ -70,6 +70,9 @@
 ![image](https://github.com/user-attachments/assets/f59a12f2-d961-498b-96c4-6f0fa5de3b9f)
 
 ![image](https://github.com/user-attachments/assets/5a0d4c05-a65b-41a9-bd57-e4fe0ec99d59)
+
+<code>npx json-server db.json --watch</code> <br><br><br>
+![image](https://github.com/user-attachments/assets/e7d99a7c-1504-4298-9459-6b4abe9ee24c)
 
 <code>ng g environments</code>
 
