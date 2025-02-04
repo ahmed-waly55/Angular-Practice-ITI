@@ -58,3 +58,10 @@
 ![image](https://github.com/user-attachments/assets/967736c4-4e38-4896-860c-86685a89d253)
 
 ![image](https://github.com/user-attachments/assets/1ed2b7c5-8f60-461c-bf82-73842fd744f8)
+
+<h1>Day 5 </h1>
+<h2>Observable</h2>
+
+<h1>Day 6 </h1>
+<h2>Json Server and integrate Api</h2>
+![image](https://github.com/user-attachments/assets/a18ffe70-3110-446a-8737-4277c56a633f)
