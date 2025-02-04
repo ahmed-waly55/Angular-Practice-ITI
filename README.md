@@ -64,4 +64,6 @@
 
 <h1>Day 6 </h1>
 <h2>Json Server and integrate Api</h2>
-![image](https://github.com/user-attachments/assets/a18ffe70-3110-446a-8737-4277c56a633f)
+
+![image](https://github.com/user-attachments/assets/f59a12f2-d961-498b-96c4-6f0fa5de3b9f)
+
