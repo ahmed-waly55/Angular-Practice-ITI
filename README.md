@@ -34,6 +34,8 @@
 
 ![image](https://github.com/user-attachments/assets/30d2e15e-2d33-456a-accb-8b23f63a581e)
 
+![image](https://github.com/user-attachments/assets/13e8bbe2-9876-4291-a902-09642fca8a62)
+
 
 <h2>Component Lifecycle</h2>
 
@@ -67,3 +69,4 @@
 
 ![image](https://github.com/user-attachments/assets/f59a12f2-d961-498b-96c4-6f0fa5de3b9f)
 
+![image](https://github.com/user-attachments/assets/5a0d4c05-a65b-41a9-bd57-e4fe0ec99d59)
