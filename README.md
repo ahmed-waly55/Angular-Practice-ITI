@@ -70,3 +70,5 @@
 ![image](https://github.com/user-attachments/assets/f59a12f2-d961-498b-96c4-6f0fa5de3b9f)
 
 ![image](https://github.com/user-attachments/assets/5a0d4c05-a65b-41a9-bd57-e4fe0ec99d59)
+
+<code>ng g environments</code>
