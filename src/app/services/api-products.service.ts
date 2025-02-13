@@ -1,21 +1,26 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iproduct } from '../models/iproduct';
 import { Icategory } from '../models/icategory';
 import { environment } from '../../environments/environment.development';
+import { UserAuthService } from './user-auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiProductsService {
 
-  constructor(private _httpClient:HttpClient) {
+  constructor(private _httpClient:HttpClient,private _userAuth:UserAuthService) {
 
    }
 
 getAllProducts():Observable<Iproduct[]>{
- return this._httpClient.get<Iproduct[]>(`${environment.basUrl}/products`)
+ return this._httpClient.get<Iproduct[]>(`${environment.basUrl}/products`,{
+  headers: new HttpHeaders({
+    'authorization': this._userAuth.getToken()
+  })
+ })
 };
 
 getProductById(id:number):Observable<Iproduct>{
