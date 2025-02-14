@@ -85,3 +85,6 @@
 ![image](https://github.com/user-attachments/assets/46602de4-0484-49b2-8384-73324bdec63f)
 
 <h1>Day 7 </h1>
+
+![image](https://github.com/user-attachments/assets/27af4068-bc1c-4701-a73e-777eceba3184)
+![image](https://github.com/user-attachments/assets/5b25f296-4fd6-4f0f-b59a-fe18d86add11)
