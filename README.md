@@ -1,21 +1,19 @@
-<h1>Day 3 </h1>
-<h2>Pipe</h2>
+<h1>Day 6 </h1>
+<h2>Json Server and integrate Api</h2>
 
-![image](https://github.com/user-attachments/assets/668f3026-61b2-4b63-bac4-fcdce24eadda)
+![image](https://github.com/user-attachments/assets/f59a12f2-d961-498b-96c4-6f0fa5de3b9f)
 
-![image](https://github.com/user-attachments/assets/7239dbab-a340-420a-a7ac-a6d4943c9bf2)
+![image](https://github.com/user-attachments/assets/5a0d4c05-a65b-41a9-bd57-e4fe0ec99d59)
 
+<code>npx json-server db.json --watch</code> <br><br><br>
+![image](https://github.com/user-attachments/assets/e7d99a7c-1504-4298-9459-6b4abe9ee24c)
 
-![image](https://github.com/user-attachments/assets/30d2e15e-2d33-456a-accb-8b23f63a581e)
+<code>ng g environments</code>
 
+![image](https://github.com/user-attachments/assets/e8573868-9886-4888-a01b-14f6606711ca)
 
-<h2>Component Lifecycle</h2>
+![image](https://github.com/user-attachments/assets/36b6f9cd-82e5-41a3-9881-65d660fdfada)
 
-![image](https://github.com/user-attachments/assets/24525756-4027-49c1-a10f-1678490988a7)
+![image](https://github.com/user-attachments/assets/6567cf5c-fb62-455e-b469-e0e47edc5ac7)
 
-![image](https://github.com/user-attachments/assets/ff1489d6-7522-4548-9781-811548b90af3)
-
-![image](https://github.com/user-attachments/assets/479f5306-2655-4995-b69c-841e3f6ee473)
-
-![image](https://github.com/user-attachments/assets/e653b844-7d2d-41f2-add0-f1fb25ac10b2)
-![image](https://github.com/user-attachments/assets/d9d65f2c-73c1-4150-a47e-ba74ae27b74e)
+![image](https://github.com/user-attachments/assets/46602de4-0484-49b2-8384-73324bdec63f)
