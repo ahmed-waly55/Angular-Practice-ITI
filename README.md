@@ -1,5 +1,5 @@
 ### Progress Bar
-| 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | **75.00%**
+| 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | ⬜ | **81.25%**
 
 <h1>Angular </h1>
 <h1>Day 2 </h1>
@@ -106,4 +106,5 @@
 ![image](https://github.com/user-attachments/assets/f7a65150-2db6-4b58-ac71-6e6d626cea7f)
 
 ![image](https://github.com/user-attachments/assets/4dd08e11-2876-4241-a9d6-31c7d4ca4224)
+
 
