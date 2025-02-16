@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iproduct } from '../models/iproduct';
@@ -30,7 +30,15 @@ getProductById(id:number):Observable<Iproduct>{
 };
 
 getProductByCatId(catId:number):Observable<Iproduct[]>{
-  return this._httpClient.get<Iproduct[]>(`${environment.basUrl}/products/?catId=${catId}`)
+
+  let searchString  = new HttpParams()
+  searchString = searchString.append("catId",catId)
+  searchString = searchString.append("limit",5)
+
+  return this._httpClient.get<Iproduct[]>(`${environment.basUrl}/products`,{
+    // params: new HttpParams().set('catId',catId)
+    params:searchString
+  })
 }
 
 addProduct(newPrd:Iproduct):Observable<Iproduct>{
