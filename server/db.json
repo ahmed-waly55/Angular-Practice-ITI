@@ -59,21 +59,8 @@
       "name": "ahmed",
       "price": 100000,
       "quantity": 1,
-      "imgUrl": "C:\\fakepath\\475785833_1003665168273640_2837120124016551417_n.jpg",
+      "imgUrl": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
       "catId": "1"
-    }
-    
-  ],
-  "categories": [
-    {
-      "id": "1",
-      "name": "electronics",
-      "description": "Electronic items."
-    },
-    {
-      "id": "2",
-      "name": "jewelery",
-      "description": "Precious metals and items."
     }
   ]
 }
