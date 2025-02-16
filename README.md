@@ -92,3 +92,7 @@
 
 ![image](https://github.com/user-attachments/assets/df0a8f62-8109-48e4-99a7-c9135d7fc181)
 ![image](https://github.com/user-attachments/assets/ccc585b3-ce52-4db0-949c-0b80d323ecc5)
+
+<h3>interceptor</h3>
+
+![image](https://github.com/user-attachments/assets/dbd82855-4685-4329-93fe-4988d7cd315f)
