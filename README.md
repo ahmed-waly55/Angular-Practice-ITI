@@ -121,8 +121,16 @@
 <h4>HTML Code</h4>
 
 ![image](https://github.com/user-attachments/assets/8fb42236-6a19-4258-a05a-2130d847e402)
+![image](https://github.com/user-attachments/assets/0be3ffd6-db17-4528-a540-44877deb66ad)
+
+----------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/0ca95b2c-e19d-4bee-93d4-00efd71ce4dc)
 
 <h4>TypeScript Code</h4>
 
 ![image](https://github.com/user-attachments/assets/be8b9ce3-c8d4-4712-bc25-c0cf1d2ffe6a)
+![image](https://github.com/user-attachments/assets/65d7fdbd-e731-487b-9a88-a9ee052a19c2)
+
+-------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/9c0122f0-a949-4fb7-a779-6572c5091dff)
 
