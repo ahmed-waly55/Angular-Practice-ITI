@@ -111,4 +111,5 @@
 
 ![image](https://github.com/user-attachments/assets/f35cdd4e-c62d-41e2-b043-0cf4f5900258)
 
-
+<h3>lazy loading</h3>
+![image](https://github.com/user-attachments/assets/235ec6a5-e6a9-415a-9e9a-39c289e096b9)
