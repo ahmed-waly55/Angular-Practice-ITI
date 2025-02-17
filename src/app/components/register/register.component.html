@@ -2,9 +2,20 @@
 
     <h1>{{UserRegisterForm.value | json}}</h1>   <!--DISPAY VALUE-->
 
+    <h2> {{UserRegisterForm.get('name')?.errors| json }}</h2>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Name</label>
       <input name="name" formControlName="name" type="text" class="form-control" id="exampleInputEmail1">
+    @if(name?.touched && name?.invalid){
+        <div class="text-danger">
+            @if(name?.errors?.['required']){
+                <p>Name is Required</p>
+            }
+            @if(name?.errors?.['pattern']){
+            <p>Name Must be between 3 to 10 characters .</p>
+            }
+        </div>
+    }
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -27,6 +38,17 @@
       </div>
    </div>
    <!-- End Div  -->
+
+
+    <div formArrayName="phoneNumber">
+        <div class="mb-3" *ngFor="let ph of phones.controls">
+            <label for="exampleInputPassword1" class="form-label">phone</label>
+            <input type="text" name="phone" formControlName="0" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <button class="btn btn-success my-5" (click)="addNewPhone()">+</button>
+
+    </div>
 
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
