@@ -10,12 +10,19 @@ import { ValuesComponent } from './components/values/values.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = [
     {path: '' , redirectTo: 'home' , pathMatch:'full'},
     {path: 'home' , component: HomeComponent},
     {path:'login',component: LoginComponent},
-    {path: 'products', component : ProductsComponent , canActivate:[authGuard]},
+    {path:'register',component: RegisterComponent},
+
+    // lazy loading 
+    {path: 'products', loadComponent:()=> import('./components/products/products.component')
+        .then((obj)=>obj.ProductsComponent),
+         canActivate:[authGuard]},
+
     {path:'add',component:AddProductComponent},
 
     {path: 'about', component: AboutUsComponent,
