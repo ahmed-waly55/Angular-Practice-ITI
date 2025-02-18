@@ -167,3 +167,8 @@
 <h3>Component</h3>
 
 ![image](https://github.com/user-attachments/assets/4d53b7da-b59e-4a9b-9699-2588c218fb0d)
+
+<h3>Another Component</h3>
+
+![image](https://github.com/user-attachments/assets/53367435-7e0d-4058-be86-901794298bf9)
+
