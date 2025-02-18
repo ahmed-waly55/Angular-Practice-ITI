@@ -71,10 +71,11 @@
 
 ![image](https://github.com/user-attachments/assets/5a0d4c05-a65b-41a9-bd57-e4fe0ec99d59)
 
-<code>npx json-server db.json --watch</code> <br><br><br>
+<pre><code>npx json-server db.json --watch</code></pre>
+<br><br><br>
 ![image](https://github.com/user-attachments/assets/e7d99a7c-1504-4298-9459-6b4abe9ee24c)
 
-<code>ng g environments</code>
+<pre><code>ng g environments</code></pre>
 
 ![image](https://github.com/user-attachments/assets/e8573868-9886-4888-a01b-14f6606711ca)
 
@@ -147,5 +148,4 @@
 
 ![image](https://github.com/user-attachments/assets/87008190-9f36-48a3-b823-f68842eb1928)
 
-<pre>ng add @ngrx/store@latest</pre>
 <pre><code>ng add @ngrx/store@latest</code></pre>
