@@ -147,3 +147,5 @@
 
 ![image](https://github.com/user-attachments/assets/87008190-9f36-48a3-b823-f68842eb1928)
 
+<pre>ng add @ngrx/store@latest</pre>
+<pre><code>ng add @ngrx/store@latest</code></pre>
