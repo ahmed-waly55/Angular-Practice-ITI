@@ -142,3 +142,8 @@
 
 ![image](https://github.com/user-attachments/assets/174df5d2-b701-44ca-8bf1-2a7789f97553)
 
+<h1>Day 8 </h1>
+<h2>NGRX</h2>
+
+![image](https://github.com/user-attachments/assets/87008190-9f36-48a3-b823-f68842eb1928)
+
