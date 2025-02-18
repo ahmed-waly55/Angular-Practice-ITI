@@ -1,47 +1,26 @@
+import { AsyncPipe } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NotificationService } from '../../services/notification.service';
-import { filter, Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit , OnDestroy{
+export class HomeComponent{
 
-  subscribtion!:Subscription;
-  constructor(private _Notification:NotificationService){
-
-  }
-
-  ngOnInit():void {
-    // this._Notification.getNotification().subscribe((notification)=>{
-    //   console.log(notification);
-      
-    // },(error)=>{
-    //   console.log(`----------${error}--------------------`);
-      
+  // count!:number;
+  counter:Observable<number>
+  constructor(private _store:Store<{counter:number}>){
+    this.counter = _store.select("counter")
+    // this.counter.subscribe((newVal)=>{
+    //   this.count = newVal
     // })
-
-    this.subscribtion = this._Notification.getNotification().pipe(
-      filter((msg)=> msg.startsWith('Welcome'))
-    ).subscribe({
-      next: (notification)=>{console.log(notification);
-      },
-      error:(error)=>{console.log(`-----------${error}----------------`);
-      },
-      complete:()=>{
-        console.log("notification complete");
-        
-      }
-    })
   }
 
 
-  ngOnDestroy(): void {
-    this.subscribtion.unsubscribe();
-  }
 
 
 }
