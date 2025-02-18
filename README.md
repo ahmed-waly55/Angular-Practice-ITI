@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/25628f6a-ba49-41cb-b128-fc0d4d2a5f90)### Progress Bar
+### Progress Bar
 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | **93.75%**
 
 <h1>Angular </h1>
