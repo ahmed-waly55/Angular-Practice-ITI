@@ -1,4 +1,4 @@
-### Progress Bar
+![image](https://github.com/user-attachments/assets/25628f6a-ba49-41cb-b128-fc0d4d2a5f90)### Progress Bar
 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | ⬜ | **87.50%**
 
 <h1>Angular </h1>
@@ -149,3 +149,14 @@
 ![image](https://github.com/user-attachments/assets/87008190-9f36-48a3-b823-f68842eb1928)
 
 <pre><code>ng add @ngrx/store@latest</code></pre>
+
+![image](https://github.com/user-attachments/assets/c25c9aa6-97df-4f16-90cf-5c8bec739d82)
+
+<h3>Action</h3>
+
+![image](https://github.com/user-attachments/assets/02b8ff2f-4eb5-4ab3-8d85-a82660c22f97)
+
+<h3>Reducer</h3>
+
+![image](https://github.com/user-attachments/assets/e4598bc7-e418-4345-a3cd-faa27d5f07af)
+
