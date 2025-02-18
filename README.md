@@ -163,3 +163,7 @@
 <h3>Store</h3>
 
 ![image](https://github.com/user-attachments/assets/144e8da3-c4f5-40f1-b907-84fb392db072)
+
+<h3>Component</h3>
+
+![image](https://github.com/user-attachments/assets/4d53b7da-b59e-4a9b-9699-2588c218fb0d)
