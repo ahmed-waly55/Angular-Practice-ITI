@@ -2,6 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { decreaseCounter, increaseCounter } from '../../store/counter/counter.action';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,14 @@ export class HomeComponent{
     // })
   }
 
+  increaseCounterVal(){
+    this._store.dispatch(increaseCounter())
+  }
 
 
+  decreaseCounterVal(){
+    this._store.dispatch(decreaseCounter())
+  }
 
 }
+ 

@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
-
+<div class="" [dir]="dir">
+  <app-navbar></app-navbar>
+<h2>{{language$ | async}}</h2>
 <div class="container">
   <!-- <app-products></app-products> -->
    <!-- <app-order></app-order> -->
@@ -7,3 +8,4 @@
 </div>
 
 <app-footer></app-footer>
+</div>
