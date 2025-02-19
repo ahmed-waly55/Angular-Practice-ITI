@@ -172,3 +172,6 @@
 
 ![image](https://github.com/user-attachments/assets/53367435-7e0d-4058-be86-901794298bf9)
 
+<p>install effects</p>
+
+<pre><code>ng add @ngrx/effects</code></pre>
